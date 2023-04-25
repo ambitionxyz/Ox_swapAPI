@@ -227,7 +227,6 @@ async function trySwap() {
   ];
   console.log("trying swap");
 
-  // Only work if MetaMask is connect
   // Connecting to Ethereum: Metamask
   const web3 = new Web3(Web3.givenProvider);
 
@@ -246,7 +245,6 @@ async function trySwap() {
   const ERC20TokenContract = new web3.eth.Contract(erc20abi, fromTokenAddress);
   console.log("setup ERC20TokenContract: ", ERC20TokenContract);
 
-  // Grant the allowance target an allowance to spend our tokens.
   const tx = await ERC20TokenContract.methods
     .approve(swapQuoteJSON.allowanceTarget, maxApproval)
     .send({ from: takerAddress })
