@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "big-number": "^2.0.0",
+    "qs": "^6.11.1"
+  }
+}
